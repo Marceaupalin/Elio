@@ -1,0 +1,116 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --elio-ink:        #1E2A42;
+    --elio-ink-soft:   #2A3754;
+    --elio-ink-deep:   #14192C;
+
+    --elio-coral:      #D2694B;
+    --elio-coral-soft: #E8876A;
+    --elio-coral-wash: #FFF0E9;
+
+    --elio-cream:      #FAF7F2;
+    --elio-sand:       #F2ECE2;
+    --elio-stone:      #E6DFD3;
+
+    --elio-text:       #1E2A42;
+    --elio-text-muted: #5A6578;
+    --elio-text-soft:  #8A93A3;
+
+    --elio-success:    #3F8B6B;
+    --elio-border:     rgba(30, 42, 66, 0.08);
+    --elio-border-mid: rgba(30, 42, 66, 0.14);
+
+    --r-sm:  10px;
+    --r-md:  16px;
+    --r-lg:  24px;
+    --r-xl:  32px;
+    --r-2xl: 48px;
+    --r-pill: 999px;
+
+    --shadow-sm: 0 2px 8px rgba(30, 42, 66, 0.04);
+    --shadow-md: 0 8px 24px rgba(30, 42, 66, 0.06);
+    --shadow-lg: 0 20px 60px rgba(30, 42, 66, 0.08);
+    --shadow-coral: 0 12px 40px rgba(210, 105, 75, 0.18);
+  }
+
+  html {
+    @apply scroll-smooth;
+  }
+
+  body {
+    @apply bg-elio-cream text-elio-text font-sans antialiased overflow-x-hidden selection:bg-elio-coral selection:text-white;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-serif font-normal;
+  }
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+  
+  .hide-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+  .hide-scrollbar {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+  
+  .mask-image-fade {
+    mask-image: linear-gradient(to right, transparent, black 15%, black 85%, transparent);
+    -webkit-mask-image: linear-gradient(to right, transparent, black 15%, black 85%, transparent);
+  }
+
+  /* Mascot Animations */
+  @keyframes elioLoop {
+    0%   { transform: translateY(0)     rotate(0deg)    scale(1,1); }
+    7%   { transform: translateY(-6px)  rotate(-2.4deg) scale(1.005,.995); }
+    15%  { transform: translateY(-2px)  rotate(1.2deg)  scale(1,1); }
+    23%  { transform: translateY(-6px)  rotate(-2.2deg) scale(1.005,.995); }
+    31%  { transform: translateY(-2px)  rotate(1.0deg)  scale(1,1); }
+    39%  { transform: translateY(-5px)  rotate(-1.6deg) scale(1.004,.996); }
+    50%  { transform: translateY(0)     rotate(0deg)    scale(1,1); }
+    58%  { transform: translateY(-10px) rotate(-1.2deg) scale(.985,1.015); }
+    68%  { transform: translateY(-2px)  rotate(0.6deg)  scale(1.008,.992); }
+    78%  { transform: translateY(-8px)  rotate(-0.8deg) scale(.99,1.01); }
+    88%  { transform: translateY(-1px)  rotate(0.4deg)  scale(1.003,.997); }
+    100% { transform: translateY(0)     rotate(0deg)    scale(1,1); }
+  }
+
+  @keyframes floorShadow {
+    0%,50%,100% { transform:translateX(-50%) scaleX(1);    opacity:.9; }
+    7%,23%      { transform:translateX(-50%) scaleX(.82);  opacity:.6; }
+    15%,31%,39% { transform:translateX(-50%) scaleX(.95);  opacity:.75;}
+    58%,78%     { transform:translateX(-50%) scaleX(.78);  opacity:.55;}
+    68%,88%     { transform:translateX(-50%) scaleX(1.02); opacity:.95;}
+  }
+
+  @keyframes glowPulse {
+    0%,100% { opacity:.55; transform:translateX(-50%) scale(1); }
+    25%     { opacity:.85; transform:translateX(-50%) scale(1.08); }
+    50%     { opacity:.6;  transform:translateX(-50%) scale(1); }
+    75%     { opacity:.95; transform:translateX(-50%) scale(1.12); }
+  }
+
+  .animate-elio {
+    animation: elioLoop 3.5s ease-in-out infinite;
+    transform-origin: 50% 92%;
+    will-change: transform;
+  }
+
+  .animate-elio-shadow {
+    animation: floorShadow 3.5s ease-in-out infinite;
+    will-change: transform, opacity;
+  }
+
+  .animate-elio-glow {
+    animation: glowPulse 3.5s ease-in-out infinite;
+  }
+}
