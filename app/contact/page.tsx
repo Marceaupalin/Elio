@@ -73,11 +73,10 @@ export default function ContactPage() {
             
             <div className="flex flex-col gap-8">
               <div>
-                <h3 className="font-mono text-[11px] uppercase tracking-widest text-elio-coral mb-2">Coordonnées</h3>
-                <p className="text-elio-ink font-medium">contact@eliorobotics.fr</p>
-                <p className="text-elio-ink font-medium">+33 1 00 00 00 00</p>
+                <h3 className="font-mono text-[11px] uppercase tracking-widest text-elio-coral mb-2">Email</h3>
+                <a href="mailto:contact@elio-robot.fr" className="text-elio-ink font-medium hover:text-elio-coral transition-colors">contact@elio-robot.fr</a>
               </div>
-              
+
               <div>
                 <h3 className="font-mono text-[11px] uppercase tracking-widest text-elio-coral mb-2">Bureaux</h3>
                 <p className="text-elio-ink font-medium">Paris, France</p>

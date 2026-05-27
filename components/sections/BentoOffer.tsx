@@ -33,7 +33,7 @@ export function BentoOffer() {
             </p>
             <div className="absolute bottom-8 left-8 md:left-12">
               <span className="font-mono text-[11px] uppercase tracking-wider text-elio-coral border border-elio-coral/30 px-3 py-1.5 rounded-pill">
-                PROPRIÉTÉ EXCLUSIVE ELIO
+                NOTRE CŒUR DE MÉTIER
               </span>
             </div>
           </Reveal>

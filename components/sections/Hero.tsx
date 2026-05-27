@@ -21,14 +21,14 @@ export function Hero() {
             </Reveal>
 
             <Reveal delay={0.1}>
-              <h1 className="text-[clamp(48px,7vw,96px)] leading-[1.02] tracking-[-0.02em] font-serif text-elio-ink mb-6 text-balance">
-                Les robots de service, enfin <span className="italic text-elio-coral">orchestrée</span>
+              <h1 className="text-[clamp(40px,6vw,80px)] leading-[1.05] tracking-[-0.02em] font-serif text-elio-ink mb-6 text-balance">
+                L&apos;intégrateur multi-marques de robots de service, <span className="italic text-elio-coral">avec le SAV en France</span>.
               </h1>
             </Reveal>
 
             <Reveal delay={0.2}>
               <p className="text-[19px] leading-[1.6] text-elio-text-muted max-w-[560px] mb-10">
-                Elio accompagne les groupes hospitality, opérateurs de propreté et chaînes retail dans la sélection, l&apos;intégration et l&apos;exploitation des robots de service les plus performants, grâce à une approche multi-fabricants.
+                Elio sélectionne, intègre et exploite les robots adaptés à vos opérations, en hospitality, propreté et retail. Une seule approche, toutes les marques.
               </p>
             </Reveal>
 
@@ -36,7 +36,7 @@ export function Hero() {
               <div className="flex flex-col sm:flex-row items-center gap-4 mb-10">
                 <Button asChild size="lg" className="w-full sm:w-auto">
                   <Link href="/contact" className="gap-2">
-                    Demander un rendez-vous
+                    Planifier un échange
                     <ArrowUpRight size={20} className="group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform" />
                   </Link>
                 </Button>
@@ -65,29 +65,29 @@ export function Hero() {
                 <MascotAnimated className="scale-[1.1] md:scale-[1.2]" />
               </Reveal>
 
-              {/* Card 2: Floating KPI */}
+              {/* Badge: SAV France */}
               <Reveal delay={0.4} className="absolute -left-6 lg:-left-12 bottom-24 z-20">
                 <div className="bg-elio-sand rounded-2xl p-6 shadow-xl border border-white/50 backdrop-blur-sm">
                   <div className="font-mono text-[11px] uppercase tracking-wider text-elio-text-soft mb-1">
-                    Coûts opérationnels
+                    Service après-vente
                   </div>
-                  <div className="font-serif text-[48px] leading-none text-elio-ink">
-                    −35<span className="text-[32px] text-elio-text-muted">%</span>
+                  <div className="font-serif text-[28px] leading-tight text-elio-ink">
+                    SAV France
                   </div>
                   <div className="text-xs font-medium text-elio-success mt-1">
-                    Sur 24 mois
+                    Ingénieurs francophones
                   </div>
                 </div>
               </Reveal>
 
-              {/* Card 3: Live Badge */}
+              {/* Badge: Multi-marques */}
               <Reveal delay={0.5} className="absolute -right-4 lg:-right-8 top-12 z-20">
                 <div className="bg-white/90 backdrop-blur-md rounded-pill px-4 py-3 shadow-lg border border-elio-border inline-flex items-center gap-2">
                   <span className="relative flex h-2 w-2">
                     <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-elio-coral opacity-75"></span>
-                    <span className="relative inline-flex rounded-full h-2 w-2 bg-elio-coral text-[8px]"></span>
+                    <span className="relative inline-flex rounded-full h-2 w-2 bg-elio-coral"></span>
                   </span>
-                  <span className="font-medium text-[13px] text-elio-ink">12 robots déployés ce trimestre</span>
+                  <span className="font-medium text-[13px] text-elio-ink">Multi-marques, indépendant</span>
                 </div>
               </Reveal>
 

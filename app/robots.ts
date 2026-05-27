@@ -6,6 +6,6 @@ export default function robots(): MetadataRoute.Robots {
       userAgent: '*',
       allow: '/',
     },
-    sitemap: 'https://eliorobotics.fr/sitemap.xml',
+    sitemap: 'https://elio-robot.fr/sitemap.xml',
   }
 }

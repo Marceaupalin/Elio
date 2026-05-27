@@ -9,7 +9,7 @@ export function Sectors() {
       id: "nettoyage",
       label: "NETTOYAGE",
       title: "Entretien des sols",
-      desc: "Autolaveuses autonomes pour lobbies, gares, supermarchés. 1500m²/h, 80% d'eau en moins. ROI immédiat sur les coûts de main d'œuvre.",
+      desc: "Autolaveuses autonomes pour lobbies, gares, supermarchés. 1 500 m²/h, 80% d'eau en moins. Vos équipes recentrées sur leurs missions à valeur ajoutée.",
       gradient: "from-elio-success/20 to-elio-sand/40",
     },
     {
@@ -52,7 +52,7 @@ export function Sectors() {
             <Reveal key={use.id} delay={0.1 * idx} className="group bg-white rounded-[24px] p-6 lg:p-10 border border-elio-border hover:shadow-lg transition-all duration-300">
               {/* Image Placeholder */}
               <div className={`w-full aspect-video rounded-xl bg-gradient-to-tr ${use.gradient} mb-8 flex items-center justify-center overflow-hidden relative`}>
-                <span className="text-elio-ink/20 font-serif text-2xl italic">Espace photo</span>
+                <span className="text-elio-ink/10 font-mono text-xs uppercase tracking-widest">{use.label}</span>
               </div>
 
               <div className="font-mono text-[11px] uppercase tracking-[0.14em] text-elio-text-soft mb-4">

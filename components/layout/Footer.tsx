@@ -5,10 +5,10 @@ import Image from "next/image";
 export function Footer() {
   return (
     <footer className="bg-elio-ink relative overflow-hidden text-white pt-20 pb-8">
-      {/* Background Mascot Vector */}
+      {/* Decorative background mascot */}
       <div className="absolute -bottom-24 -right-12 opacity-5 pointer-events-none w-96 h-96">
         <Image
-          src="/ChatGPT Image Apr 17, 2026, 12_52_24 PM.png"
+          src="/mascot.webp"
           alt=""
           fill
           className="object-contain grayscale"
@@ -16,7 +16,7 @@ export function Footer() {
       </div>
 
       <Container className="relative z-10">
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-12 mb-16">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-12 mb-16">
           <div className="flex flex-col gap-4">
             <div className="flex items-center">
               <Image
@@ -27,17 +27,9 @@ export function Footer() {
                 className="h-10 w-auto"
               />
             </div>
-          </div>
-
-          <div>
-            <h4 className="font-mono text-xs uppercase tracking-widest text-elio-text-soft mb-6">Solutions</h4>
-            <ul className="flex flex-col gap-3">
-              <li><Link href="/solutions#integration" className="text-white/80 hover:text-white transition-colors text-sm">Intégration SI</Link></li>
-              <li><Link href="/solutions#multimarques" className="text-white/80 hover:text-white transition-colors text-sm">Multi-marques</Link></li>
-              <li><Link href="/solutions#raas" className="text-white/80 hover:text-white transition-colors text-sm">Robot-as-a-Service</Link></li>
-              <li><Link href="/financement" className="text-white/80 hover:text-white transition-colors text-sm font-medium text-elio-coral">Financement CARSAT</Link></li>
-              <li><Link href="/solutions#data" className="text-white/80 hover:text-white transition-colors text-sm">Data & Supervision</Link></li>
-            </ul>
+            <p className="text-white/50 text-sm leading-relaxed max-w-[260px]">
+              Intégrateur multi-marques de robots de service B2B, avec le SAV en France.
+            </p>
           </div>
 
           <div>
@@ -56,14 +48,18 @@ export function Footer() {
             <h4 className="font-mono text-xs uppercase tracking-widest text-elio-text-soft mb-6">Contact</h4>
             <ul className="flex flex-col gap-3 text-white/80 text-sm">
               <li>Paris, France</li>
-              <li><a href="mailto:contact@eliorobotics.fr" className="hover:text-white transition-colors">contact@eliorobotics.fr</a></li>
-              <li>+33 1 00 00 00 00</li>
+              <li><a href="mailto:contact@elio-robot.fr" className="hover:text-white transition-colors">contact@elio-robot.fr</a></li>
+              <li className="pt-3 flex flex-col gap-2">
+                <Link href="/approche" className="hover:text-white transition-colors">Notre approche</Link>
+                <Link href="/financement" className="hover:text-white transition-colors">Financement</Link>
+                <Link href="/contact" className="hover:text-white transition-colors font-medium text-elio-coral hover:text-elio-coral-soft">Planifier un échange</Link>
+              </li>
             </ul>
           </div>
         </div>
 
         <div className="border-t border-white/10 pt-8 flex flex-col md:flex-row justify-between items-center gap-4 text-xs font-mono text-white/50 tracking-wider">
-          <p>© 2026 ELIO ROBOTICS · SIRET XXX</p>
+          <p>© 2026 ELIO ROBOTICS</p>
           <div className="flex gap-6">
             <Link href="/mentions-legales" className="hover:text-white transition-colors">MENTIONS LÉGALES</Link>
             <Link href="/confidentialite" className="hover:text-white transition-colors">POLITIQUE DE CONFIDENTIALITÉ</Link>

@@ -19,16 +19,22 @@ const jetbrains = JetBrains_Mono({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://eliorobotics.fr"),
-  title: "Elio Robotics | Intégrateur & Conseil en Robotique de Service",
+  metadataBase: new URL("https://elio-robot.fr"),
+  title: "Elio Robotics | Intégrateur multi-marques de robots de service",
   description:
-    "Elio accompagne les entreprises françaises dans la sélection, l&apos;intégration et l&apos;exploitation des robots de service. Modèle RaaS, SAV France, intégration SI.",
+    "Elio sélectionne, intègre et exploite les robots de service adaptés à vos opérations : hospitality, propreté, retail. Modèle RaaS, SAV France, intégration SI.",
   openGraph: {
-    title: "Elio Robotics | La robotique de service, orchestrée.",
-    description: "Intégrateur multi-marques de robots de service B2B.",
-    url: "https://eliorobotics.fr",
+    title: "Elio Robotics | L'intégrateur multi-marques de robots de service",
+    description: "Intégrateur multi-marques de robots de service B2B, avec le SAV en France.",
+    url: "https://elio-robot.fr",
     siteName: "Elio Robotics",
     images: [{ url: "/og-image.png", width: 1200, height: 630 }],
+  },
+  twitter: {
+    card: "summary_large_image",
+    site: "elio-robot.fr",
+    title: "Elio Robotics | Intégrateur multi-marques de robots de service",
+    description: "Elio sélectionne, intègre et exploite les robots de service adaptés à vos opérations.",
   },
 };
 
