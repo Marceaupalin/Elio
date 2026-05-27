@@ -8,6 +8,12 @@ import { Button } from "@/components/ui/Button";
 import Link from "next/link";
 import { ArrowUpRight } from "lucide-react";
 
+export const metadata = {
+  title: "Notre approche | Elio Robotics",
+  description:
+    "Elio est un intégrateur multi-marques indépendant : audit, sélection, intégration SI et exploitation continue. Quatre étapes, des livrables concrets à chaque phase.",
+};
+
 export default function ApprochePage() {
   return (
     <div className="bg-elio-cream min-h-screen">

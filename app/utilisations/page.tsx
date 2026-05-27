@@ -29,6 +29,12 @@ import {
   Eye
 } from "lucide-react";
 
+export const metadata = {
+  title: "Utilisations | Elio Robotics",
+  description:
+    "Nettoyage, service en salle, livraison interne, accueil, logistique, hygiène : découvrez les cas d'usage de la robotique de service B2B avec Elio, intégrateur multi-marques.",
+};
+
 export default function UtilisationsPage() {
   const navItems = [
     { id: "nettoyage", label: "Nettoyage" },
