@@ -1,5 +1,6 @@
 import { Reveal } from "@/components/ui/Reveal";
 import { Container } from "@/components/layout/Container";
+import { ImagePlaceholder } from "@/components/ui/ImagePlaceholder";
 import Link from "next/link";
 import { ArrowRight } from "lucide-react";
 
@@ -10,28 +11,32 @@ export function Sectors() {
       label: "NETTOYAGE",
       title: "Entretien des sols",
       desc: "Autolaveuses autonomes pour lobbies, gares, supermarchés. 1 500 m²/h, 80% d'eau en moins. Vos équipes recentrées sur leurs missions à valeur ajoutée.",
-      gradient: "from-elio-success/20 to-elio-sand/40",
+      imgId: "usecase-nettoyage",
+      imgAlt: "Robot autolaveuse autonome en lobby d'hôtel",
     },
     {
       id: "service",
       label: "SERVICE",
       title: "Restauration & Hospitality",
-      desc: "Robots runners pour livrer les plats et débarrasser. Libérez vos serveurs pour le conseil et la vente. Idéal pour groupes et franchises.",
-      gradient: "from-elio-coral/20 to-elio-sand/40",
+      desc: "Robots runners pour livrer les plats et débarrasser. Vos serveurs restent concentrés sur le conseil et la relation client. Idéal pour groupes et franchises.",
+      imgId: "usecase-service",
+      imgAlt: "Robot serveur portant des assiettes en salle de restaurant",
     },
     {
       id: "livraison",
       label: "LIVRAISON",
       title: "Logistique interne",
-      desc: "Transport de linge, médicaments ou room-service. Prise d'ascenseur autonome. Solution 24/7 pour hôtels et cliniques.",
-      gradient: "from-elio-ink-soft/20 to-elio-sand/40",
+      desc: "Transport de linge, médicaments ou room-service. Prise d'ascenseur autonome. Couvre les plages horaires difficiles à pourvoir, sans interrompre vos équipes.",
+      imgId: "usecase-livraison",
+      imgAlt: "Robot de livraison inter-étages dans un couloir d'hôtel",
     },
     {
       id: "accueil",
       label: "ACCUEIL",
       title: "Orientation & Guidage",
-      desc: "Premier contact multilingue pour orienter les visiteurs en magasin ou lobby. Information dynamique et accompagnement physique.",
-      gradient: "from-elio-coral-wash to-elio-sand/40",
+      desc: "Premier contact multilingue pour orienter les visiteurs en magasin ou lobby. Vos équipes libérées pour les interactions à haute valeur ajoutée.",
+      imgId: "usecase-accueil",
+      imgAlt: "Robot d'accueil orientant un visiteur dans un lobby",
     },
   ];
 
@@ -50,10 +55,13 @@ export function Sectors() {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
           {uses.map((use, idx) => (
             <Reveal key={use.id} delay={0.1 * idx} className="group bg-white rounded-[24px] p-6 lg:p-10 border border-elio-border hover:shadow-lg transition-all duration-300">
-              {/* Image Placeholder */}
-              <div className={`w-full aspect-video rounded-xl bg-gradient-to-tr ${use.gradient} mb-8 flex items-center justify-center overflow-hidden relative`}>
-                <span className="text-elio-ink/10 font-mono text-xs uppercase tracking-widest">{use.label}</span>
-              </div>
+              <ImagePlaceholder
+                label={`Visuel : ${use.imgId.replace('usecase-', '').replace('-', ' ')}`}
+                alt={use.imgAlt}
+                aspectRatio="aspect-video"
+                src={`/assets/images/${use.imgId}.webp`}
+                className="rounded-xl mb-8"
+              />
 
               <div className="font-mono text-[11px] uppercase tracking-[0.14em] text-elio-text-soft mb-4">
                 ● {use.label}
