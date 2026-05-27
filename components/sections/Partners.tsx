@@ -6,7 +6,7 @@ export function Partners() {
     { name: "Pudu", desc: "Leader mondial service hospitality" },
     { name: "Keenon", desc: "Innovateur indoor delivery" },
     { name: "Gausium", desc: "Spécialiste autolaveuses" },
-    { name: "OrionStar", desc: "Robots d&apos;accueil IA" },
+    { name: "OrionStar", desc: "Robots d'accueil IA" },
     { name: "Reeman", desc: "Logistique et chassis" },
     { name: "HikRobot", desc: "Vision et AMR industriels" },
   ];
@@ -16,18 +16,32 @@ export function Partners() {
       <Container>
         <Reveal>
           <div className="font-mono text-[11px] uppercase tracking-[0.14em] text-elio-text-soft mb-6">
-            06 — ÉCOSYSTÈME
+            06 — NOS MARQUES PARTENAIRES
           </div>
-          <h2 className="text-[clamp(36px,4.5vw,56px)] leading-[1.05] font-serif mb-16 max-w-2xl text-elio-ink">
-            Les meilleurs fabricants du marché. <br /><span className="italic text-elio-coral">Sélectionnés, pas subis</span>.
+          <h2 className="text-[clamp(32px,4vw,52px)] leading-[1.08] font-serif mb-5 max-w-3xl text-elio-ink">
+            Multi-marques, par principe.
           </h2>
+          <p className="text-[17px] text-elio-text-muted max-w-2xl leading-relaxed mb-16">
+            Nous sélectionnons le robot adapté à votre cas, pas celui qui arrange notre stock. Notre indépendance vis-à-vis des fabricants est la garantie que nous travaillons dans votre intérêt.
+          </p>
         </Reveal>
 
         <div className="grid grid-cols-2 md:grid-cols-3 gap-4 lg:gap-6">
           {partners.map((partner, idx) => (
-            <Reveal key={idx} delay={0.1 * idx} className="bg-white border border-elio-border rounded-xl p-8 flex flex-col items-center justify-center text-center gap-4 hover:border-elio-border-mid transition-colors duration-300">
-              <div className="h-12 flex items-center justify-center">
-                <span className="font-sans font-bold text-2xl text-elio-ink/30 uppercase tracking-widest">{partner.name}</span>
+            <Reveal
+              key={idx}
+              delay={0.08 * idx}
+              className="bg-white border border-elio-border rounded-xl p-8 flex flex-col items-center justify-center text-center gap-4 hover:border-elio-border-mid transition-colors duration-300"
+            >
+              {/*
+                LOGO FABRICANT à placer ici : /assets/images/logo-[nom].webp
+                Dimensions cibles : 160x60px (ratio 8:3), fond transparent.
+                Voir /assets/images/README.md pour la convention de nommage.
+              */}
+              <div className="h-14 w-full flex items-center justify-center">
+                <span className="font-sans font-bold text-2xl text-elio-ink/25 uppercase tracking-widest select-none">
+                  {partner.name}
+                </span>
               </div>
               <p className="text-[13px] text-elio-text-muted">{partner.desc}</p>
             </Reveal>
