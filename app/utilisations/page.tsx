@@ -372,8 +372,8 @@ export default function UtilisationsPage() {
             </div>
           </Reveal>
 
-          <div className="space-y-4">
-            <Reveal delay={0.1} className="bg-elio-coral-wash p-8 rounded-[32px] h-full flex flex-col">
+          <div className="flex flex-col gap-4">
+            <Reveal delay={0.1} className="bg-elio-coral-wash p-8 rounded-[32px] flex-1 flex flex-col">
               <Droplets className="text-elio-coral mb-6" size={32} />
               <h3 className="font-serif text-2xl mb-4">Sanitaires autonomes</h3>
               <p className="text-[15px] text-elio-text-muted mb-8 leading-relaxed">
@@ -384,7 +384,7 @@ export default function UtilisationsPage() {
               </div>
             </Reveal>
 
-            <Reveal delay={0.2} className="bg-elio-sand p-8 rounded-[32px] h-full flex flex-col">
+            <Reveal delay={0.2} className="bg-elio-sand p-8 rounded-[32px] flex-1 flex flex-col">
               <Eye className="text-elio-coral mb-6" size={32} />
               <h3 className="font-serif text-2xl mb-4">Surveillance propreté</h3>
               <p className="text-[15px] text-elio-text-muted mb-8 leading-relaxed">

@@ -4,8 +4,10 @@ import { NextRequest, NextResponse } from "next/server";
 // Resend est instancié dans chaque handler pour éviter une erreur au build
 // si RESEND_API_KEY n'est pas encore défini dans l'environnement de CI/CD.
 
-// Adresse de réception — modifier dans les variables d'environnement si besoin.
-const TO_EMAIL = process.env.CONTACT_EMAIL ?? "contact@elio-robot.fr";
+// Adresse de réception (peut contenir plusieurs adresses séparées par des virgules)
+const TO_EMAILS = (process.env.CONTACT_EMAIL ?? "contact@elio-robot.fr, marceau.michaud.bot@gmail.com, Hugues.Morel-Lab@inspearit.com")
+  .split(",")
+  .map((email) => email.trim());
 
 // Adresse d'expédition :
 //   - Sans domaine vérifié sur Resend : utilise "onboarding@resend.dev" (fonctionne en test)
@@ -166,7 +168,7 @@ export async function POST(req: NextRequest) {
 
     const { error } = await resend.emails.send({
       from: FROM_EMAIL,
-      to: [TO_EMAIL],
+      to: TO_EMAILS,
       replyTo: email,
       subject: `Nouvelle demande — ${nom} (${entreprise})`,
       html: emailHtml({ nom, entreprise, email, telephone, secteur, message }),

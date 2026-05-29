@@ -11,4 +11,4 @@
  *
  * Tant qu'il vaut "/contact", les CTA redirigent vers le formulaire de contact.
  */
-export const CALENDLY_URL = "/contact";
+export const CALENDLY_URL = "https://calendly.com/marceau-michaud-bot/30min";
