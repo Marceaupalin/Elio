@@ -14,7 +14,7 @@ const TO_EMAILS = (process.env.CONTACT_EMAIL ?? "contact@elio-robot.fr, marceau.
 //   - Avec domaine elio-robot.fr vérifié : utilise "noreply@elio-robot.fr" (production)
 //   Configurer RESEND_FROM_EMAIL dans les variables d'environnement Vercel.
 const FROM_EMAIL =
-  process.env.RESEND_FROM_EMAIL ?? "Elio Robotics <onboarding@resend.dev>";
+  process.env.RESEND_FROM_EMAIL ?? "Elio Robotics <contact@elio-robot.fr>";
 
 const SECTEUR_LABELS: Record<string, string> = {
   chr: "CHR (Restauration / Hôtellerie)",
