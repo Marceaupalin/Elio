@@ -1,9 +1,9 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  output: "export",
-  trailingSlash: true,
+  // Mode "output: export" retiré → active les API routes Next.js (nécessaire pour l'envoi email).
+  // Déployer sur Vercel (gratuit) — Firebase Hosting seul ne supporte pas les routes serveur.
   images: {
-    unoptimized: true, // required for static export (no Next.js image server)
+    unoptimized: true, // conserver jusqu'au dépôt des vrais visuels dans /assets/images/
   },
 };
 
